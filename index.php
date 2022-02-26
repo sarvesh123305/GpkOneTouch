@@ -100,7 +100,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form name="Login" id="Login" method="post"  >
+        <form name="Login" id="Login" action="action.php" method="post"  >
           <div class="mb-3">
           </div>          
           <div class="mb-3">
