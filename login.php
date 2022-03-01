@@ -22,7 +22,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Pass'])) {
     $_SESSION['sess_user']=$user;  
     /* Redirect browser */  
     // header("Location: index.php");  
-    echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+    echo '<script>alert("Welcome to GP Connect")</script>';
     
     }  
     } else {  
