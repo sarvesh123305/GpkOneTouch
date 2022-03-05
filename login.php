@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,45 +20,8 @@
 <body>
 <!-- Button trigger modal -->
 <!-- Modal -->
-<div class="modal fade" id="LoginSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Success</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        You have been logged in successfully
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="LoginFailure" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Failure</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Kytr chukly
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
-      </div>
-    </div>
-  </div>
-</div>
-<?php  
 
-
+ <?php  
 if(isset($_POST["submit"])){  
 if(!empty($_POST['Email']) && !empty($_POST['Pass'])) {  
     $user=$_POST['Email'];  
@@ -82,15 +46,14 @@ if(!empty($_POST['Email']) && !empty($_POST['Pass'])) {
     /* Redirect browser */  
     // header("Location: index.php");  
     // echo '<script>alert("Welcome to GP Connect")</script>';
-    echo "<script type='text/javascript'>
+   echo "<script type='text/javascript'>
 $(document).ready(function(){
 $('#LoginSuccess').modal('show');
 });
 </script>";
-    
     }  
     } else {  
-    // echo "Invalid username or password!";
+      // echo "Invalid username or password!";
     // echo '<script>alert("Invalid username or password!")</script>';
         echo "<script type='text/javascript'>
 $(document).ready(function(){
@@ -107,5 +70,40 @@ $('#LoginFailure').modal('show');
 }  
 }  
 ?>  
+<div class="modal fade" id="LoginSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"><img src="images/Success.png" class="responsive" height="30px" width="30px" />Success</h5>
+                 <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
+
+      </div>
+      <div class="modal-body">
+        You have been logged in successfully
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="LoginFailure" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"><img src="images/failure.jpeg" class="responsive" height="30px" width="30px" />Failure</h5>
+                    <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
+
+      </div>
+      <div class="modal-body">
+    Invalid Username or Password
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

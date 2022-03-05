@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,22 +39,29 @@
 
 <?php  
 if(isset($_POST["submitReg"])){  
-    echo "<script type='text/javascript'>
-$(document).ready(function(){
-$('#Register').modal('show');
-});
-</script>";
-if(!empty($_POST['NameReg']) && !empty($_POST['EmailReg'])  &&!empty($_POST['Phone_no'])) {  
+
+if($_POST['Password'] != $_POST['ConfirmPassword'])
+{
+    echo '<script>alert("Done")</script>' ;
+
+}
+if(!empty($_POST['NameReg']) && !empty($_POST['EmailReg'])  &&!empty($_POST['Phone_no']) && !empty($_POST['Password']) && !empty($_POST['ConfirmPassword'])) {  
     $name=$_POST['NameReg'];  
     $email=$_POST['EmailReg'];  
-    $phone=$_POST['Phone_no'];  
+    $phone=$_POST['Phone_no'];
+    $Password=$_POST['Password'];  
+    $ConfirmPassword=$_POST['ConfirmPassword'];  
+
 
   $_POST['NameReg']="";
   $_POST['EmailReg']="";
   $_POST['Phone_no']="";
+  $_POST['Password']="";
+  $_POST['ConfirmPassword']="";
+
 
       $con=mysqli_connect('localhost','root','',"onetouch"); 
-    $query="insert into register (name,email,phone) values('$name','$email','$phone')";  
+    $query="insert into register (name,email,phone,password) values('$name','$email','$phone','$Password')";  
     if (mysqli_query($con, $query)) {
         // echo '<script>alert("Done")</script>' ;
           echo "<script type='text/javascript'>

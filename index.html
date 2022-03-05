@@ -8,6 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
+      <link rel = "icon" href="images/logo.png"        type = "image/x-icon">
       <title>GPK@OneTouch</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
@@ -102,11 +103,10 @@
 <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Login Page-Welcome To GpK@OneTouch</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <div class="modal-header text-center">
+        <h5 class="modal-title w-100" id="exampleModalLabel">Login</h5>
+      <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
+
       </div>
       <div class="modal-body">
         <form name="Login" id="Login" action="login.php" method="post"  >
@@ -126,7 +126,8 @@
           </div>
         <hr>
           <div class="text-center">
-        <button type="submit" name="submit" id="btnSave" class="btn btn-primary btn-block" disabled >Submit</button>
+        <button type="submit" name="submit" id="btnSave" class="btn btn-danger " disabled >Submit</button>
+
         </form>
       </div>
       </div>
@@ -154,11 +155,10 @@
 <div class="modal fade" id="RegiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Register To GpK@OneTouch</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <div class="modal-header text-center">
+        <h5 class="modal-title w-100" id="exampleModalLabel">Register</h5>
+            <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
+
       </div>
       <div class="modal-body">
         <form name="Register" id="RegiModal" action="register.php" method="post">
@@ -173,12 +173,21 @@
             <input type="email" name="EmailReg" class="form-control" id="InputEmail1" aria-describedby="emailHelp" required>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+            <label for="Phone" class="form-label">Phone Number</label>
             <input type="number" name="Phone_no" class="form-control" id="InputNumber" required>
+          </div>
+           <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Create Password</label>
+            <input type="password"  name="Password" class="form-control" id="InputPass" required>
+          </div>
+               <div class="mb-3">
+            <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+            <input type="password" name="ConfirmPassword" class="form-control" id="InputPass1" required>
           </div>
         <hr>
           <div class="text-center">
-        <button type="submit" name="submitReg" id="btnSave1" class="btn btn-primary btn-block" data-toggle="modal">Register</button>
+            <button type="button" class="btn btn-outline-dark">Clear</button>
+        <button type="submit" name="submitReg" id="btnSave1" class="btn btn-success" data-toggle="modal">Register</button>
         </form>       
       </div>
       </div>
