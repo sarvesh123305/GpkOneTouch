@@ -52,7 +52,7 @@
 <body class="main-layout">
    <!-- loader  -->
    <div class="loader_bg">
-      <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      <div class="loader"><img src="images/load.gif" alt="#" /></div>
    </div>
    <!-- end loader -->
    <!-- header -->
@@ -94,141 +94,152 @@
                               <a class="nav-link" href="contact.html">Contact Us</a>
                            </li>
 
+                           <li class="nav-item">
+                              <a class="nav-link" href="" data-toggle="modal"
+                              data-target="#LoginModal">Login</a>
+                           </li>
+                        
+                           <!--This is for modal view --data-toggle="modal" 
+                           data-target="#RegiModal">-->
+
+                           <li class="nav-item">
+                              <a class="nav-link" href="" data-toggle="modal" 
+                              data-target="#RegiModal">Register</a>
+                           </li>
+
                            <!--  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal"  aria-pressed="false" autocomplete="off">
                                 Login
                                     </button> -->
 
                            <!-- Button trigger modal -->
-
+                           <!--
                            <div class="d-flex gap-1">
                               <li class="nav-item">
                                  <button type="button" class="btn btn-success" data-toggle="modal"
                                     data-target="#LoginModal">
                                     Login
-                                 </button>
+                                 </button>-->
 
-                                 <!-- Modal -->
-                                 <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                       <div class="modal-content">
-                                          <div class="modal-header text-center">
-                                             <h5 class="modal-title w-100" id="exampleModalLabel">Login</h5>
-                                             <button type="button" class="btn-close" aria-label="Close"
-                                                data-dismiss="modal"></button>
-
-                                          </div>
-                                          <div class="modal-body">
-                                             <form name="Login" id="Login" action="login.php" method="post">
-                                                <div class="mb-3">
-                                                </div>
-                                                <div class="mb-3">
-                                                   <label for="exampleInputEmail1" class="form-label">Email
-                                                      address</label>
-                                                   <input type="email" onkeyup="isEmpty()" name="Email"
-                                                      class="form-control" id="InputEmail1" aria-describedby="emailHelp"
-                                                      required>
-                                                </div>
-                                                <div class="mb-3">
-                                                   <label for="exampleInputPassword1"
-                                                      class="form-label">Password</label>
-                                                   <input type="password" onkeyup="isEmpty()" name="Pass"
-                                                      class="form-control" id="InputPassword1" required>
-                                                   <!-- <label id="hello">Your email</label> -->
-                                                </div>
-                                                <div class="">
-                                                   <a href="">Forgot Password?</a></br>
-                                                </div>
-                                                <hr>
-                                                <div class="text-center">
-                                                   <button type="submit" name="submit" id="btnSave"
-                                                      class="btn btn-danger " disabled>Submit</button>
-
-                                             </form>
-                                          </div>
-                                       </div>
+                           <!-- Modal -->
+                           <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog"
+                              aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                 <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                       <h5 class="modal-title w-100" id="exampleModalLabel">Login</h5>
+                                       <button type="button" class="btn-close" aria-label="Close"
+                                          data-dismiss="modal"></button>
 
                                     </div>
+                                    <div class="modal-body">
+                                       <form name="Login" id="Login" action="login.php" method="post">
+                                          <div class="mb-3">
+                                          </div>
+                                          <div class="mb-3">
+                                             <label for="exampleInputEmail1" class="form-label">Email
+                                                address</label>
+                                             <input type="email" onkeyup="isEmpty()" name="Email" class="form-control"
+                                                id="InputEmail1" aria-describedby="emailHelp" required>
+                                          </div>
+                                          <div class="mb-3">
+                                             <label for="exampleInputPassword1" class="form-label">Password</label>
+                                             <input type="password" onkeyup="isEmpty()" name="Pass" class="form-control"
+                                                id="InputPassword1" required>
+                                             
+                                          </div>
+                                          <div class="">
+                                             <a href="">Forgot Password?</a></br>
+                                          </div>
+                                          <hr>
+                                          <div class="text-center">
+                                             <button type="submit" name="submit" id="btnSave" class="btn btn-danger "
+                                                disabled>Submit</button>
+
+                                       </form>
+                                    </div>
                                  </div>
+
+                              </div>
                            </div>
+                     </div>
 
 
-                           <!--SignUp Modal
- <div class="d-flex gap-1">
+                     <!--SignUp Modal-->
+ <!--<div class="d-flex gap-1">
  <li class="nav-item">
  <button type="button" class="btn btn-primary">
  SignUp
 </button>-->
 
-                           <!--Register Modal-->
-                           <div class="d-flex gap-1">
+                     <!--Register Modal-->
+                          <!-- <div class="d-flex gap-1">
                               <li class="nav-item">
                                  </button><button type="button" class="btn btn-warning" data-toggle="modal"
                                     data-target="#RegiModal">
                                     Register
-                                 </button>
+                                 </button>-->
 
 
-                                 <div class="modal fade" id="RegiModal" tabindex="-1" role="dialog"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                       <div class="modal-content">
-                                          <div class="modal-header text-center">
-                                             <h5 class="modal-title w-100" id="exampleModalLabel">Register</h5>
-                                             <button type="button" class="btn-close" aria-label="Close"
-                                                data-dismiss="modal"></button>
+                     <div class="modal fade" id="RegiModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                           <div class="modal-content">
+                              <div class="modal-header text-center">
+                                 <h5 class="modal-title w-100" id="exampleModalLabel">Register</h5>
+                                 <button type="button" class="btn-close" aria-label="Close"
+                                    data-dismiss="modal"></button>
 
-                                          </div>
-                                          <div class="modal-body">
-                                             <form name="Register" id="RegiModal" action="register.php" method="post">
-                                                <div class="mb-3">
-                                                </div>
-                                                <div class="mb-3">
-                                                   <label for="exampleInputEmail1" class="form-label">Name</label>
-                                                   <input type="text" name="NameReg" class="form-control" id="InputName"
-                                                      aria-describedby="" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                   <label for="exampleInputEmail1" class="form-label">Email
-                                                      address</label>
-                                                   <input type="email" name="EmailReg" class="form-control"
-                                                      id="InputEmail1" aria-describedby="emailHelp" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                   <label for="Phone" class="form-label">Phone Number</label>
-                                                   <input type="number" name="Phone_no" class="form-control"
-                                                      id="InputNumber" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                   <label for="exampleInputPassword1" class="form-label">Create
-                                                      Password</label>
-                                                   <input type="password" name="Password" class="form-control"
-                                                      id="InputPass" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                   <label for="exampleInputPassword2" class="form-label">Confirm
-                                                      Password</label>
-                                                   <input type="password" name="ConfirmPassword" class="form-control"
-                                                      id="InputPass1" required>
-                                                </div>
-                                                <hr>
-                                                <div class="text-center">
-                                                   <button type="button" class="btn btn-outline-dark">Clear</button>
-                                                   <button type="submit" name="submitReg" id="btnSave1"
-                                                      class="btn btn-success" data-toggle="modal">Register</button>
-                                             </form>
-                                          </div>
-                                       </div>
+                              </div>
+                              <div class="modal-body">
+                                 <form name="Register" id="RegiModal" action="register.php" method="post">
+                                    <div class="mb-3">
                                     </div>
-                                 </div>
+                                    <div class="mb-3">
+                                       <label for="exampleInputEmail1" class="form-label">Name</label>
+                                       <input type="text" name="NameReg" class="form-control" id="InputName"
+                                          aria-describedby="" required>
+                                    </div>
+                                    <div class="mb-3">
+                                       <label for="exampleInputEmail1" class="form-label">Email
+                                          address</label>
+                                       <input type="email" name="EmailReg" class="form-control" id="InputEmail1"
+                                          aria-describedby="emailHelp" required>
+                                    </div>
+                                    <div class="mb-3">
+                                       <label for="Phone" class="form-label">Phone Number</label>
+                                       <input type="number" name="Phone_no" class="form-control" id="InputNumber"
+                                          required>
+                                    </div>
+                                    <div class="mb-3">
+                                       <label for="exampleInputPassword1" class="form-label">Create
+                                          Password</label>
+                                       <input type="password" name="Password" class="form-control" id="InputPass"
+                                          required>
+                                    </div>
+                                    <div class="mb-3">
+                                       <label for="exampleInputPassword2" class="form-label">Confirm
+                                          Password</label>
+                                       <input type="password" name="ConfirmPassword" class="form-control"
+                                          id="InputPass1" required>
+                                    </div>
+                                    <hr>
+                                    <div class="text-center">
+                                       <button type="button" class="btn btn-outline-dark">Clear</button>
+                                       <button type="submit" name="submitReg" id="btnSave1" class="btn btn-success"
+                                          data-toggle="modal">Register</button>
+                                 </form>
+                              </div>
                            </div>
-                           </li>
-                        </ul>
+                        </div>
                      </div>
-                  </nav>
                </div>
+               </li>
+               </ul>
             </div>
+            </nav>
          </div>
+      </div>
+      </div>
       </div>
    </header>
    </form>
@@ -269,7 +280,7 @@
             <img src="images/first1.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
 
-               <button type="button" id="submitbutton" class="btn btn-lg btn-outline-dark btn-success"
+               <!--<button type="button" id="submitbutton" class="btn btn-lg btn-outline-dark btn-success"
                   data-toggle="modal" data-target="#LoginModal">
                   Login
                </button>
@@ -279,9 +290,9 @@
                   Register
                </button>
             </div>
-         </div>
+         </div>-->
 
-         <div class="carousel-item">
+         ,<!--div class="carousel-item">
             <img src="images/caro2.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                <button type="button" id="submitbutton" class="btn btn-lg btn-outline-dark btn-success"
@@ -302,7 +313,7 @@
                <p>Some representative placeholder content for the third slide.</p>
             </div>
          </div>
-      </div>
+      </div>-->
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
          data-bs-slide="prev">
          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -619,8 +630,6 @@
 
                      <p>
                         © 2022 All Rights Reserved.
-                        <br><br>
-
                      </p>
 
                   </div>
