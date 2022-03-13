@@ -69,6 +69,9 @@ $('#LoginFailure').modal('show');
 
 }  
 }  
+else{
+  echo "Some Error Occured";
+}
 ?>  
 <div class="modal fade" id="LoginSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">

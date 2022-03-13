@@ -90,4 +90,7 @@ $('#Register').modal('show');
 mysqli_close($con);
 
 }  
+else{
+  echo "Some Error Occured";
+}
 ?>  

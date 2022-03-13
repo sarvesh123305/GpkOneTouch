@@ -318,7 +318,50 @@
       <h2 class="faq">
          Here are some frequently asked questions about GPK!
       </h2>
+      <?php 
+for($i=1; $i<=5; $i++){
+   ?>
+      <div class="row border border-dark">
+  <div class="span9">Question :
+   <?php 
+include "db_conn.php";
 
+// for(int i=1;i<5;i++)
+$sql="select Question from Qna where id=$i";
+$result = mysqli_query($conn, $sql);
+while($row = mysqli_fetch_array($result)) {
+     echo "{$row['Question']}";
+         
+   }
+   
+   
+   ?>
+  </hr>
+     <div>Answer :
+ <?php 
+
+// for(int i=0;i<5;i++)
+$sql1="select Answer from Qna where id=$i";
+$result1 = mysqli_query($conn, $sql1);
+while($row = mysqli_fetch_array($result1)) {
+     echo "{$row['Answer']}"; 
+   }
+   
+     ?>
+     </div>
+     <div>
+      Answered By : <?php 
+      $sql3="select AnsweredBy from Qna where id=$i";
+$result3 = mysqli_query($conn, $sql3);
+while($row = mysqli_fetch_array($result3)) {
+     echo "{$row['AnsweredBy']}";
+         
+   }?>
+     </div>
+  </div>
+</div>
+
+   <?php }?>
    </div>
 
    <!-- about -->
