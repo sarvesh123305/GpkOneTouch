@@ -28,7 +28,7 @@ if (mysqli_num_rows($result) == 1) {
          
          if( $retval == 1 ) {
 
-            header("Location:index.html");
+            header("Location:index.php");
             //header("Location: index.html?error=The mail is sent to your mail enter the code ");
 
             exit();

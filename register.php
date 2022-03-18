@@ -62,7 +62,8 @@ if(!empty($_POST['NameReg']) && !empty($_POST['EmailReg'])  &&!empty($_POST['Pho
 
       $con=mysqli_connect('localhost','root','',"onetouch"); 
     $query="insert into register (name,email,phone,password) values('$name','$email','$phone','$Password')";  
-    if (mysqli_query($con, $query)) {
+    if (mysqli_query($con, $query))
+     {
         // echo '<script>alert("Done")</script>' ;
           echo "<script type='text/javascript'>
 $(document).ready(function(){
