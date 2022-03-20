@@ -23,9 +23,8 @@
    <!--Navbar css-->
    <link rel="stylesheet" href="css/navbar.css">
 
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <link rel="stylesheet" href="search.css">
 
    <!-- fevicon -->
    <link rel="icon" href="images/fevicon.png" type="image/gif" />
@@ -33,22 +32,12 @@
    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-      media="screen">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -58,103 +47,90 @@
 
 <body>
    <!--Login Modal-->
-   <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog"
-                              aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div class="modal-dialog" role="document">
-                                 <div class="modal-content">
-                                    <div class="modal-header text-center">
-                                       <h5 class="modal-title w-100" id="exampleModalLabel">Login</h5>
-                                       <button type="button" class="btn-close" aria-label="Close"
-                                          data-dismiss="modal"></button>
+   <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header text-center">
+               <h5 class="modal-title w-100" id="exampleModalLabel">Login</h5>
+               <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
 
-                                    </div>
-                                    <div class="modal-body">
-                                       <form name="Login" id="Login" action="login.php" method="post">
-                                          <div class="mb-3">
-                                          </div>
-                                          <div class="mb-3">
-                                             <label for="exampleInputEmail1" class="form-label">Email
-                                                address</label>
-                                             <input type="email" onkeyup="isEmpty()" name="Email" class="form-control"
-                                                id="InputEmail1" aria-describedby="emailHelp" required>
-                                          </div>
-                                          <div class="mb-3">
-                                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                                             <input type="password" onkeyup="isEmpty()" name="Pass" class="form-control"
-                                                id="InputPassword1" required>
+            </div>
+            <div class="modal-body">
+               <form name="Login" id="Login" action="login.php" method="post">
+                  <div class="mb-3">
+                  </div>
+                  <div class="mb-3">
+                     <label for="exampleInputEmail1" class="form-label">Email
+                        address</label>
+                     <input type="email" onkeyup="isEmpty()" name="Email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" required>
+                  </div>
+                  <div class="mb-3">
+                     <label for="exampleInputPassword1" class="form-label">Password</label>
+                     <input type="password" onkeyup="isEmpty()" name="Pass" class="form-control" id="InputPassword1" required>
 
-                                          </div>
-                                          <div class="">
-                                             <a href="forget.php">Forgot Password?</a></br>
-                                          </div>
-                                          <hr>
-                                          <div class="text-center">
-                                             <button type="submit" name="submit" id="btnSave" class="btn btn-danger "
-                                                disabled>Submit</button>
+                  </div>
+                  <div class="">
+                     <a href="forget.php">Forgot Password?</a></br>
+                  </div>
+                  <hr>
+                  <div class="text-center">
+                     <button type="submit" name="submit" id="btnSave" class="btn btn-danger " disabled>Submit</button>
 
-                                       </form>
-                                    </div>
-                                 </div>
+               </form>
+            </div>
+         </div>
 
-                              </div>
-                           </div>
-                     </div>
+      </div>
+   </div>
+   </div>
    <!--End Login Modal-->
    <!--Register Modal-->
 
-  <div class="modal fade" id="RegiModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                           <div class="modal-content">
-                              <div class="modal-header text-center">
-                                 <h5 class="modal-title w-100" id="exampleModalLabel">Register</h5>
-                                 <button type="button" class="btn-close" aria-label="Close"
-                                    data-dismiss="modal"></button>
+   <div class="modal fade" id="RegiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header text-center">
+               <h5 class="modal-title w-100" id="exampleModalLabel">Register</h5>
+               <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
 
-                              </div>
-                              <div class="modal-body">
-                                 <form name="Register" id="RegiModal" action="register.php" method="post">
-                                    <div class="mb-3">
-                                    </div>
-                                    <div class="mb-3">
-                                       <label for="exampleInputEmail1" class="form-label">Name</label>
-                                       <input type="text" name="NameReg" class="form-control" id="InputName"
-                                          aria-describedby="" required>
-                                    </div>
-                                    <div class="mb-3">
-                                       <label for="exampleInputEmail1" class="form-label">Email
-                                          address</label>
-                                       <input type="email" name="EmailReg" class="form-control" id="InputEmail1"
-                                          aria-describedby="emailHelp" required>
-                                    </div>
-                                    <div class="mb-3">
-                                       <label for="Phone" class="form-label">Phone Number</label>
-                                       <input type="number" name="Phone_no" class="form-control" id="InputNumber"
-                                          required>
-                                    </div>
-                                    <div class="mb-3">
-                                       <label for="exampleInputPassword1" class="form-label">Create
-                                          Password</label>
-                                       <input type="password" name="Password" class="form-control" id="InputPass"
-                                          required>
-                                    </div>
-                                    <div class="mb-3">
-                                       <label for="exampleInputPassword2" class="form-label">Confirm
-                                          Password</label>
-                                       <input type="password" name="ConfirmPassword" class="form-control"
-                                          id="InputPass1" required>
-                                    </div>
-                                    <hr>
-                                    <div class="text-center">
-                                       <button type="button" class="btn btn-outline-dark">Clear</button>
-                                       <button type="submit" name="submitReg" id="btnSave1" class="btn btn-success"
-                                          data-toggle="modal">Register</button>
-                                 </form>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-               </div>
+            </div>
+            <div class="modal-body">
+               <form name="Register" id="RegiModal" action="register.php" method="post">
+                  <div class="mb-3">
+                  </div>
+                  <div class="mb-3">
+                     <label for="exampleInputEmail1" class="form-label">Name</label>
+                     <input type="text" name="NameReg" class="form-control" id="InputName" aria-describedby="" required>
+                  </div>
+                  <div class="mb-3">
+                     <label for="exampleInputEmail1" class="form-label">Email
+                        address</label>
+                     <input type="email" name="EmailReg" class="form-control" id="InputEmail1" aria-describedby="emailHelp" required>
+                  </div>
+                  <div class="mb-3">
+                     <label for="Phone" class="form-label">Phone Number</label>
+                     <input type="number" name="Phone_no" class="form-control" id="InputNumber" required>
+                  </div>
+                  <div class="mb-3">
+                     <label for="exampleInputPassword1" class="form-label">Create
+                        Password</label>
+                     <input type="password" name="Password" class="form-control" id="InputPass" required>
+                  </div>
+                  <div class="mb-3">
+                     <label for="exampleInputPassword2" class="form-label">Confirm
+                        Password</label>
+                     <input type="password" name="ConfirmPassword" class="form-control" id="InputPass1" required>
+                  </div>
+                  <hr>
+                  <div class="text-center">
+                     <button type="button" class="btn btn-outline-dark">Clear</button>
+                     <button type="submit" name="submitReg" id="btnSave1" class="btn btn-success" data-toggle="modal">Register</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
    <!--Ends Register Modal-->
 
    <!-- loader  -->
@@ -172,8 +148,7 @@
                   <div class="full">
                      <div class="center-desk">
                         <div class="logo">
-                           <a href="index.html" class="titlenav"><img class="responsives" src="images/loka1.jpeg"
-                                 alt="#" height="100px" width="70px"> GPK@OneTouch</a>
+                           <a href="index.html" class="titlenav"><img class="responsives" src="images/loka1.jpeg" alt="#" height="100px" width="70px"> GPK@OneTouch</a>
 
                            <style>
                               .titlenav {
@@ -195,14 +170,13 @@
                   <nav class="navigation navbar navbar-expand-md navbar-dark ">
 
 
-                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
-                        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                      </button>
                      <div class="collapse navbar-collapse" id="navbarsExample04">
                         <ul class="navbar-nav mr-auto">
                            <li class="nav-item active">
-                              <a class="nav-link" href="index.php">Home</a>
+                              <a class="nav-link" href="index.html">Home</a>
                            </li>
                            <li class="nav-item">
                               <a class="nav-link" href="about.html">About</a>
@@ -237,18 +211,18 @@
                                  </button>-->
 
                            <!-- Modal -->
-                           
 
 
-                     <!--SignUp Modal-->
-                     <!--<div class="d-flex gap-1">
+
+                           <!--SignUp Modal-->
+                           <!--<div class="d-flex gap-1">
  <li class="nav-item">
  <button type="button" class="btn btn-primary">
  SignUp
 </button>-->
 
-                     <!--Register Modal-->
-                     <!-- <div class="d-flex gap-1">
+                           <!--Register Modal-->
+                           <!-- <div class="d-flex gap-1">
                               <li class="nav-item">
                                  </button><button type="button" class="btn btn-warning" data-toggle="modal"
                                     data-target="#RegiModal">
@@ -256,14 +230,14 @@
                                  </button>-->
 
 
-                    
-               </li>
-               </ul>
+
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
             </div>
-            </nav>
          </div>
-      </div>
-      </div>
       </div>
    </header>
    </form>
@@ -297,71 +271,92 @@
             <img src="images/aa.jpeg" class="d-block w-100" alt="...">
          </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-         data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
          <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-         data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
          <span class="carousel-control-next-icon" aria-hidden="true"></span>
          <span class="visually-hidden">Next</span>
       </button>
    </div>
 
-   <div class="container">
-      <style>
-         .faq {
-            margin-top: 20px;
-         }
-      </style>
-      <h2 class="faq">
-         Here are some frequently asked questions about GPK!
-      </h2>
-      <?php 
-for($i=1; $i<=5; $i++){
-   ?>
-      <div class="row border border-dark">
-  <div class="span9">Question :
-   <?php 
-include "db_conn.php";
+   <style>
+      .faq {
+         margin-top: 30px;
+         margin-bottom: 10px;
+      }
 
-// for(int i=1;i<5;i++)
-$sql="select Question from Qna where id=$i";
-$result = mysqli_query($conn, $sql);
-while($row = mysqli_fetch_array($result)) {
-     echo "{$row['Question']}";
-         
-   }
-   
-   
-   ?>
-  </hr>
-     <div>Answer :
- <?php 
+      #qbox {
+         background-color: salmon;
+         border-radius: 40px;
+         height: 100px;
+         font-size: large;
+      }
 
-// for(int i=0;i<5;i++)
-$sql1="select Answer from Qna where id=$i";
-$result1 = mysqli_query($conn, $sql1);
-while($row = mysqli_fetch_array($result1)) {
-     echo "{$row['Answer']}"; 
-   }
-   
-     ?>
-     </div>
-     <div>
-      Answered By : <?php 
-      $sql3="select AnsweredBy from Qna where id=$i";
-$result3 = mysqli_query($conn, $sql3);
-while($row = mysqli_fetch_array($result3)) {
-     echo "{$row['AnsweredBy']}";
-         
-   }?>
-     </div>
-  </div>
-</div>
+      #faqbox {
+         width: 1300px;
+         display: grid;
+         grid-gap: 10px;
 
-   <?php }?>
+      }
+   </style>
+
+   <div class="container-fluid" id="faqbox">
+
+      <h2 class="faq">Here are some frequently asked questions about GPK!</h2>
+
+      <div class="container-fluid" id="sbox">
+         <div class="row height d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+               <div class="form"> <i class="fa fa-search"></i> <input type="text" class="form-control form-input" placeholder="Search anything..."> <span class="left-pan"><i class="fa fa-microphone"></i></span> </div>
+            </div>
+         </div>
+      </div>
+      <?php
+      for ($i = 1; $i <= 5; $i++) {
+      ?>
+         <div class="container-fluid">
+            <div class="row border" id="qbox">
+               <div class="span9">Question :
+                  <?php
+                  include "db_conn.php";
+
+                  // for(int i=1;i<5;i++)
+                  $sql = "select Question from Qna where id=$i";
+                  $result = mysqli_query($conn, $sql);
+                  while ($row = mysqli_fetch_array($result)) {
+                     echo "{$row['Question']}";
+                  }
+
+
+                  ?>
+
+                  <div>Answer :
+                     <?php
+
+                     // for(int i=0;i<5;i++)
+                     $sql1 = "select Answer from Qna where id=$i";
+                     $result1 = mysqli_query($conn, $sql1);
+                     while ($row = mysqli_fetch_array($result1)) {
+                        echo "{$row['Answer']}";
+                     }
+
+                     ?>
+                  </div>
+                  <div>
+                     Answered By : <?php
+                                    $sql3 = "select AnsweredBy from Qna where id=$i";
+                                    $result3 = mysqli_query($conn, $sql3);
+                                    while ($row = mysqli_fetch_array($result3)) {
+                                       echo "{$row['AnsweredBy']}";
+                                    } ?>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      <?php } ?>
    </div>
 
    <!-- about -->
