@@ -646,10 +646,9 @@
                      <button class="sub_btn">subscribe</button>
                   </form>
                   <ul class="social_icon">
-                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                     <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.facebook.com/GovernmentPolyKolhapur/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.youtube.com/channel/UC5PBrIosSgHqwhCJNPfTvIA"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.instagram.com/govtpolytechnickolhapur/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                   </ul>
                </div>
             </div>
