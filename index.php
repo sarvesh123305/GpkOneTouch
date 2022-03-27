@@ -259,7 +259,7 @@
    </style>
 
 
-   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+   <div id="carouselExampleControls" class="carousel slide-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
          <div class="carousel-item active">
             <img src="images/first1.png" class="d-block w-100" alt="...">
