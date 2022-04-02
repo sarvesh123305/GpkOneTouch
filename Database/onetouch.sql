@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2022 at 05:53 AM
+-- Generation Time: Apr 02, 2022 at 11:49 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -43,25 +43,6 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
---
-
-CREATE TABLE `login` (
-  `username` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `Email` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`username`, `password`, `Email`) VALUES
-('sarvesh123305@gmail.com', 'Sarvesh', 'sarvesh123305@gmail.com');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `qna`
 --
 
@@ -84,28 +65,6 @@ INSERT INTO `qna` (`id`, `Question`, `Answer`, `Votes`) VALUES
 (5, 'Which trade is best?', 'IT(Information Technology)', 0),
 (6, 'How to import data', 'Go to import in Localhost', 1);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `register`
---
-
-CREATE TABLE `register` (
-  `id` int(30) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `phone` bigint(10) NOT NULL,
-  `password` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `register`
---
-
-INSERT INTO `register` (`id`, `name`, `email`, `phone`, `password`) VALUES
-
-(1, 'Sarvesh Anant Kulkarni', 'sarvesh123305@gmail.com', 8668446202, 'sa');
-
 --
 -- Indexes for dumped tables
 --
@@ -123,12 +82,6 @@ ALTER TABLE `qna`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `register`
---
-ALTER TABLE `register`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -143,12 +96,6 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `qna`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `register`
---
-ALTER TABLE `register`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
