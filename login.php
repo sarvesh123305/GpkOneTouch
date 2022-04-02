@@ -29,7 +29,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Pass'])) {
   $_POST['Email']="";
   $_POST['Pass']="";
     $con=mysqli_connect('localhost','root','',"onetouch"); 
-    $query1=mysqli_query($con,"SELECT * FROM register WHERE email='".$user."' AND password='".$pass."'");  
+    $query1=mysqli_query($con,"SELECT * FROM student WHERE email='".$user."' AND password='".$pass."'");  
     $numrows=@mysqli_num_rows($query1);  
     if($numrows!=0)  
     {  
@@ -80,7 +80,7 @@ if(!empty($_POST['Email1']) && !empty($_POST['Pass1'])) {
   $_POST['Email1']="";
   $_POST['Pass1']="";
     $con=mysqli_connect('localhost','root','',"onetouch"); 
-    $query2=mysqli_query($con,"SELECT * FROM register WHERE email='".$user."' AND password='".$pass."'");  
+    $query2=mysqli_query($con,"SELECT * FROM Visitor WHERE email='".$user."' AND password='".$pass."'");  
     $numrows=@mysqli_num_rows($query2);  
     if($numrows!=0)  
     {  
@@ -185,7 +185,15 @@ $('#LoginFailure').modal('show');
         You have been logged in successfully
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
+        <button type="submit"   id="ModalSuccess" name="ModalSuccess" class="btn btn-secondary" data-dismiss="modal">Done</button>
+      <!--   <script type="text/javascript">
+          
+       $(".modal").on("hidden.bs.modal", function () {
+    window.location = "your-url";
+});
+            
+          
+        </script> -->
       </div>
     </div>
   </div>
@@ -202,7 +210,8 @@ $('#LoginFailure').modal('show');
     Invalid Username or Password.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
+        
+        <button type="button" class="btn btn-secondary" onclick="javascript:window.location='/GpkOneTouch/'" data-dismiss="modal">Done</button>
       </div>
     </div>
   </div>
