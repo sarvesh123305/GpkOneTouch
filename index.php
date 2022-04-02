@@ -101,6 +101,92 @@
                            </div>
                      </div>
    <!--End Login Modal-->
+     <!--Login Visitor Modal-->
+   <div class="modal fade" id="VisitorModal" tabindex="-1" role="dialog"
+                              aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                 <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                       <h5 class="modal-title w-100" id="exampleModalLabel">Login</h5>
+                                       <button type="button" class="btn-close" aria-label="Close"
+                                          data-dismiss="modal"></button>
+
+                                    </div>
+                                    <div class="modal-body">
+                                       <form name="Login" id="VisitorForm" action="login.php" method="post">
+                                          <div class="mb-3">
+                                          </div>
+                                          <div class="mb-3">
+                                             <label for="exampleInputEmail1" class="form-label">Email
+                                                address</label>
+                                             <input type="email" onkeyup="isEmpty()" name="Email1" class="form-control"
+                                                id="InputEmail2" aria-describedby="emailHelp" required>
+                                          </div>
+                                          <div class="mb-3">
+                                             <label for="exampleInputPassword1" class="form-label">Password</label>
+                                             <input type="password" onkeyup="isEmpty()" name="Pass1" class="form-control"
+                                                id="InputPassword2" required>
+
+                                          </div>
+                                          <div class="">
+                                             <a href="forget.php">Forgot Password?</a></br>
+                                          </div>
+                                          <hr>
+                                          <div class="text-center">
+                                             <button type="submit" name="submit1" id="btnSave1" class="btn btn-danger "
+                                                >Submit</button>
+
+                                       </form>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div>
+                     </div>
+   <!--End Visitor Modal-->
+      <!--Login Admin Modal-->
+   <div class="modal fade" id="AdminModal" tabindex="-1" role="dialog"
+                              aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                 <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                       <h5 class="modal-title w-100" id="exampleModalLabel">Admin Login</h5>
+                                       <button type="button" class="btn-close" aria-label="Close"
+                                          data-dismiss="modal"></button>
+
+                                    </div>
+                                    <div class="modal-body">
+                                       <form name="Login" id="AdminForm" action="login.php" method="post">
+                                          <div class="mb-3">
+                                          </div>
+                                          <div class="mb-3">
+                                             <label for="exampleInputEmail1" class="form-label">Email
+                                                address</label>
+                                             <input type="email" onkeyup="isEmpty()" name="Email2" class="form-control"
+                                                id="InputEmail3" aria-describedby="emailHelp" required>
+                                          </div>
+                                          <div class="mb-3">
+                                             <label for="exampleInputPassword1" class="form-label">Password</label>
+                                             <input type="password" onkeyup="isEmpty()" name="Pass2" class="form-control"
+                                                id="InputPassword3" required>
+
+                                          </div>
+                                          <!-- <div class="">
+                                             <a href="forget.php">Forgot Password?</a></br>
+                                          </div> -->
+                                          <hr>
+                                          <div class="text-center">
+                                             <button type="submit" name="submit2" id="btnSave2" class="btn btn-danger "
+                                                >Submit</button>
+
+                                       </form>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div>
+                     </div>
+   <!--End Admin Modal--> 
    <!--Register Modal-->
             <script>
                 function MyMailxy(){
@@ -129,14 +215,14 @@
                                        <?php }?>
                                     </div>
                                     <div class="mb-3">
-                                       <label for="exampleInputEmail1" class="form-label">Name</label>
+                                       <label for="exampleInputEmail11" class="form-label">Name</label>
                                        <input type="text" name="NameReg" class="form-control" id="InputName"
                                           aria-describedby="" required>
                                     </div>
                                     <div class="mb-3">
-                                       <label for="exampleInputEmail1" class="form-label">Email
+                                       <label for="exampleInputEmail11" class="form-label">Email
                                           address</label>
-                                       <input type="email" name="EmailReg" class="form-control" onfocusout="MyMailx()" id="InputEmail1"
+                                       <input type="email" name="EmailReg" class="form-control" onfocusout="MyMailx()" id="InputEmail12"
                                           aria-describedby="emailHelp" required>
                                         
                                     </div>
@@ -160,7 +246,7 @@
                                     <hr>
                                     <div class="text-center">
                                        
-                                       <button type="submit" name="submitReg" id="btnSave1" class="btn btn-success"
+                                       <button type="submit" name="submitReg" id="btnSave11" class="btn btn-success"
                                           data-toggle="modal">Register</button>
                                  </form>
                               </div>
@@ -226,7 +312,21 @@
                            </li>
 
                            <li class="nav-item">
-                              <a class="nav-link" href="" data-toggle="modal" data-target="#LoginModal">Login</a>
+                              <div class="dropdown show">
+  <!-- <a class="nav-link" href="" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+    <!-- Dropdown link -->
+  <!-- </a> -->
+
+                              <a class="nav-link" href="#" id="dropdownMenuLink"  data-bs-toggle="dropdown"  >Login</a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" data-toggle="modal" data-target="#LoginModal">Login as Student</a>
+    <a class="dropdown-item" data-toggle="modal" data-target="#VisitorModal">Login as Visitor</a>
+    <a class="dropdown-item" data-toggle="modal" data-target="#AdminModal">Login as Admin</a>
+  </div>
+</div>
+
+                              <!-- <a class="nav-link" href=""   data-bs-toggle="dropdown" data-target="#LoginModal">Login</a> -->
                            </li>
 
                            <!--This is for modal view --data-toggle="modal" 

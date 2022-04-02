@@ -44,9 +44,9 @@ if(isset($_POST["submitReg"])){
         $subject = "Confirmation";
         
         $message = "</br>";
-        $message .= "<h1>This is Varification Mali for Your Email:".$_SESSION["email"]."</h1>";
+        $message .= "<h1>This is Verification Code for Your Email:".$_SESSION["email"]."</h1>";
         $message .= "</br>";
-        $message .= "<p>Your varification code is ".$_SESSION["vcode"]."</p></br>".$_SESSION["name"];
+        $message .= "<p>Your Verification code is ".$_SESSION["vcode"]."</p></br>".$_SESSION["name"];
         $message .= "</br>";
         $message .= $_SESSION["email"];
 

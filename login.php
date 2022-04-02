@@ -45,7 +45,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Pass'])) {
     $_SESSION['sess_user']=$user;  
     /* Redirect browser */  
     // header("Location: index.php");  
-    // echo '<script>alert("Welcome to GP Connect")</script>';
+    //
    echo "<script type='text/javascript'>
 $(document).ready(function(){
 $('#LoginSuccess').modal('show');
@@ -69,6 +69,109 @@ $('#LoginFailure').modal('show');
 
 }  
 }  
+ // echo '<script>alert("Welcome to GP Connect")</script>';
+//Visitor
+
+if(isset($_POST["submit1"])){  
+  
+if(!empty($_POST['Email1']) && !empty($_POST['Pass1'])) {  
+    $user=$_POST['Email1'];  
+    $pass=$_POST['Pass1'];  
+  $_POST['Email1']="";
+  $_POST['Pass1']="";
+    $con=mysqli_connect('localhost','root','',"onetouch"); 
+    $query2=mysqli_query($con,"SELECT * FROM register WHERE email='".$user."' AND password='".$pass."'");  
+    $numrows=@mysqli_num_rows($query2);  
+    if($numrows!=0)  
+    {  
+    while($row=mysqli_fetch_assoc($query2))  
+    {  
+    $dbusername=$row['email'];  
+    $dbpassword=$row['password'];  
+    }  
+  
+    if($user == $dbusername && $pass == $dbpassword)  
+    {  
+    session_start();  
+    $_SESSION['sess_visitor']=$user;  
+    /* Redirect browser */  
+    // header("Location: index.php");  
+    // echo '<script>alert("Welcome to GP Connect")</script>';
+   echo "<script type='text/javascript'>
+$(document).ready(function(){
+$('#LoginSuccess').modal('show');
+});
+</script>";
+    }  
+    } else {  
+      // echo "Invalid username or password!";
+    // echo '<script>alert("Invalid username or password!")</script>';
+        echo "<script type='text/javascript'>
+$(document).ready(function(){
+$('#LoginFailure').modal('show');
+});
+</script>";
+
+    }  
+  
+} else {  
+    // echo "All fields are required!"; 
+    // echo '<script>alert("All fields are required")</script>';
+
+}  
+} 
+
+//Admin Login
+
+
+if(isset($_POST["submit2"])){  
+  
+if(!empty($_POST['Email2']) && !empty($_POST['Pass2'])) {  
+    $user=$_POST['Email2'];  
+    $pass=$_POST['Pass2'];  
+  $_POST['Email2']="";
+  $_POST['Pass2']="";
+    $con=mysqli_connect('localhost','root','',"onetouch"); 
+    $query2=mysqli_query($con,"SELECT * FROM Admin WHERE username='".$user."' AND password='".$pass."'");  
+    $numrows=@mysqli_num_rows($query2);  
+    if($numrows!=0)  
+    {  
+    while($row=mysqli_fetch_assoc($query2))  
+    {  
+    $dbusername=$row['username'];  
+    $dbpassword=$row['password'];  
+    }  
+  
+    if($user == $dbusername && $pass == $dbpassword)  
+    {  
+    session_start();  
+    $_SESSION['sess_Admin']=$user;  
+    /* Redirect browser */  
+    // header("Location: index.php");  
+    // echo '<script>alert("Welcome to GP Connect")</script>';
+   echo "<script type='text/javascript'>
+$(document).ready(function(){
+$('#LoginSuccess').modal('show');
+});
+</script>";
+    }  
+    } else {  
+      // echo "Invalid username or password!";
+    // echo '<script>alert("Invalid username or password!")</script>';
+        echo "<script type='text/javascript'>
+$(document).ready(function(){
+$('#LoginFailure').modal('show');
+});
+</script>";
+
+    }  
+  
+} else {  
+    // echo "All fields are required!"; 
+    // echo '<script>alert("All fields are required")</script>';
+
+}  
+} 
 ?>  
 <div class="modal fade" id="LoginSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
