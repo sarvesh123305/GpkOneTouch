@@ -311,19 +311,23 @@
                               <a class="nav-link" href="contact.html">Contact Us</a>
                            </li>
 
-                           <li class="nav-item">
-                              <div class="dropdown show">
+                           <li class="nav-item ">
+                              <div class="dropdown ">
   <!-- <a class="nav-link" href="" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
     <!-- Dropdown link -->
   <!-- </a> -->
-
-                              <a class="nav-link" href="#" id="dropdownMenuLink"  data-bs-toggle="dropdown"  >Login</a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" data-toggle="modal" data-target="#LoginModal">Login as Student</a>
-    <a class="dropdown-item" data-toggle="modal" data-target="#VisitorModal">Login as Visitor</a>
-    <a class="dropdown-item" data-toggle="modal" data-target="#AdminModal">Login as Admin</a>
+                                <a class="nav-link" href="" id="dropdownMenuLink"  data-bs-toggle="dropdown"  >Login</a>
+                            
+  <div class="dropdown-menu"  class="nav-link" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" id="dropdownlogin" data-toggle="modal" data-target="#LoginModal">Login as Student</a>
+    <a class="dropdown-item" id="dropdownlogin" data-toggle="modal" data-target="#VisitorModal">Login as Visitor</a>
+    <a class="dropdown-item" id="dropdownlogin" data-toggle="modal" data-target="#AdminModal">Login as Admin</a>
   </div>
+  <style>
+     #dropdownlogin:hover{
+        background-color: red;
+     } 
+  </style>
 </div>
 
                               <!-- <a class="nav-link" href=""   data-bs-toggle="dropdown" data-target="#LoginModal">Login</a> -->
